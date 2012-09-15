@@ -318,7 +318,7 @@ namespace DeveConnecteuze.Network
         {
             if (lastKeepAlive + keepAliveTimer < DateTime.Now)
             {
-                Console.WriteLine("Sending keepalive to: " + tcpClient.Client.RemoteEndPoint);
+                //Console.WriteLine("Sending keepalive to: " + tcpClient.Client.RemoteEndPoint);
                 lastKeepAlive = DateTime.Now;
 
                 DeveOutgoingMessage keepalivemsg = new DeveOutgoingMessage(DeveMessageType.KeepAlive);

@@ -188,7 +188,7 @@ namespace DeveConnecteuze.Network
             }
         }
 
-        public byte[] ReadThisAmmountOfBytes(int bytesToRead)
+        private byte[] ReadThisAmmountOfBytes(int bytesToRead)
         {
             MemoryStream mem = new MemoryStream();
             int nextReadCount = 0;
@@ -267,7 +267,7 @@ namespace DeveConnecteuze.Network
         {
             if (lastKeepAlive + keepAliveTimer < DateTime.Now)
             {
-                Console.WriteLine("Sending keepalive to server");
+                //Console.WriteLine("Sending keepalive to server");
                 lastKeepAlive = DateTime.Now;
 
                 DeveOutgoingMessage keepalivemsg = new DeveOutgoingMessage(DeveMessageType.KeepAlive);
