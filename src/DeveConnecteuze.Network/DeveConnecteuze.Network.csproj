@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeveClient.cs" />
+    <Compile Include="DeveConnection.cs" />
     <Compile Include="DeveIncommingMessage.cs" />
     <Compile Include="DeveMessageType.cs" />
     <Compile Include="DeveOutgoingMessage.cs" />
+    <Compile Include="DevePeer.cs" />
     <Compile Include="DeveQueue.cs" />
     <Compile Include="DeveServerClient.cs" />
     <Compile Include="DeveServer.cs" />

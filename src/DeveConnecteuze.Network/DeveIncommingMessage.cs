@@ -10,8 +10,8 @@ namespace DeveConnecteuze.Network
         private byte[] bytes;
         private int m_readPosition = 0;
 
-        private DeveServerClient sender;
-        public DeveServerClient Sender
+        private DeveConnection sender;
+        public DeveConnection Sender
         {
             get { return sender; }
         }
@@ -23,7 +23,7 @@ namespace DeveConnecteuze.Network
             get { return messageType; }
         }
 
-        public DeveIncommingMessage(DeveServerClient sender, byte[] bytes)
+        public DeveIncommingMessage(DeveConnection sender, byte[] bytes)
         {
             this.bytes = bytes;
             this.sender = sender;

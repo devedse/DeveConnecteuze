@@ -99,7 +99,7 @@ namespace Server
                             break;
                         case DeveMessageType.StatusChanged:
                             NetworkStatus status = (NetworkStatus)im.ReadByte();
-                            Console.WriteLine("New network status voor " + im.Sender.LastRemoteEndpoint + ": " + status);
+                            Console.WriteLine("New network status voor " + im.Sender + ": " + status);
                             break;
                         default:
 
@@ -133,9 +133,9 @@ namespace Server
                 this.listBox2.Items.Clear();
                 lock (deveServer.Clients)
                 {
-                    foreach (DeveServerClient deveServerClient in deveServer.Clients)
+                    foreach (DeveConnection deveClientConnection in deveServer.Clients)
                     {
-                        this.listBox2.Items.Add(deveServerClient);
+                        this.listBox2.Items.Add(deveClientConnection);
                     }
                 }
             }));
