@@ -75,11 +75,6 @@ namespace DeveConnecteuze.Network
                     Console.WriteLine("Exception that happens when a client disconnects nice and safe: " + e.ToString());
                     break;
                 }
-                catch (InvalidDataException e)
-                {
-                    Console.WriteLine("Invalid data exception: " + e.ToString());
-                    break;
-                }
                 catch (IOException e)
                 {
                     Console.WriteLine("IOException: " + e.ToString());
