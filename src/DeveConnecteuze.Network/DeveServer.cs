@@ -87,7 +87,7 @@ namespace DeveConnecteuze.Network
         /// Only for internal use
         /// </summary>
         /// <param name="client"></param>
-        public void RemoveClient(DeveConnection client)
+        internal void RemoveClient(DeveConnection client)
         {
             lock (clientConnections)
             {

@@ -14,7 +14,7 @@ namespace DeveConnecteuze.Network
         private DeveQueue<DeveOutgoingMessage> messagesToSendQueue = new DeveQueue<DeveOutgoingMessage>(10);
         private DateTime lastKeepAlive = DateTime.Now;
         private TimeSpan keepAliveTimer = new TimeSpan(0, 0, 5);
-        private int size = 4096;
+        private int bufferSize = 4096;
         private byte[] receiveBuffer;
         private NetworkStream networkStream;
         private DevePeer peer;
@@ -22,7 +22,7 @@ namespace DeveConnecteuze.Network
 
         public DeveConnection(TcpClient tcpClient, DevePeer peer)
         {
-            receiveBuffer = new byte[size];
+            receiveBuffer = new byte[bufferSize];
             this.tcpClient = tcpClient;
             this.networkStream = tcpClient.GetStream();
             this.peer = peer;
@@ -82,6 +82,11 @@ namespace DeveConnecteuze.Network
                 }
             }
 
+            if (peer is DeveServer)
+            {
+                ((DeveServer)peer).RemoveClient(this);
+            }
+
             peer.AddDeveIncommingMessage(new DeveIncommingMessage(null, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Disconnected }));
 
         }
@@ -118,7 +123,7 @@ namespace DeveConnecteuze.Network
             }
         }
 
-        public void CheckAndSendKeepAliveIfNeeded()
+        internal void CheckAndSendKeepAliveIfNeeded()
         {
             if (lastKeepAlive + keepAliveTimer < DateTime.Now)
             {
