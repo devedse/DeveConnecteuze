@@ -7,7 +7,7 @@ namespace DeveConnecteuze.Network
 {
     public abstract class DevePeer
     {
-        protected DeveQueue<DeveIncommingMessage> messages = new DeveQueue<DeveIncommingMessage>(100);
+        protected DeveQueue<DeveIncomingMessage> messages = new DeveQueue<DeveIncomingMessage>(100);
 
         internal int maxMessageSize = 100000;
         public int MaxMessageSize
@@ -21,7 +21,7 @@ namespace DeveConnecteuze.Network
 
         }
 
-        public DeveIncommingMessage ReadMessage()
+        public DeveIncomingMessage ReadMessage()
         {
             if (messages.Count == 0)
             {
@@ -29,7 +29,7 @@ namespace DeveConnecteuze.Network
             }
             else
             {
-                DeveIncommingMessage retval;
+                DeveIncomingMessage retval;
                 Boolean didItWork = messages.TryDequeue(out retval);
                 if (!didItWork)
                 {
@@ -39,7 +39,7 @@ namespace DeveConnecteuze.Network
             }
         }
 
-        internal void AddDeveIncommingMessage(DeveIncommingMessage devInc)
+        internal void AddDeveIncomingMessage(DeveIncomingMessage devInc)
         {
             messages.Enqueue(devInc);
         }

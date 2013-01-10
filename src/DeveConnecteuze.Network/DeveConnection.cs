@@ -42,7 +42,7 @@ namespace DeveConnecteuze.Network
 
         internal void Runner()
         {
-            peer.AddDeveIncommingMessage(new DeveIncommingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Connected }));
+            peer.AddDeveIncomingMessage(new DeveIncomingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Connected }));
 
             Thread tr = new Thread(Sender);
             tr.Start();
@@ -61,8 +61,8 @@ namespace DeveConnecteuze.Network
                     }
 
                     byte[] data = ReadThisAmmountOfBytes(bytesToRead);
-                    DeveIncommingMessage devIn = new DeveIncommingMessage(this, data);
-                    peer.AddDeveIncommingMessage(devIn);
+                    DeveIncomingMessage devIn = new DeveIncomingMessage(this, data);
+                    peer.AddDeveIncomingMessage(devIn);
 
                 }
                 catch (SocketException e)
@@ -87,7 +87,7 @@ namespace DeveConnecteuze.Network
                 ((DeveServer)peer).RemoveClient(this);
             }
 
-            peer.AddDeveIncommingMessage(new DeveIncommingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Disconnected }));
+            peer.AddDeveIncomingMessage(new DeveIncomingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Disconnected }));
 
         }
 

@@ -38,7 +38,7 @@ namespace Server
         {
             while (isRunning)
             {
-                DeveIncommingMessage im = deveClient.ReadMessage();
+                DeveIncomingMessage im = deveClient.ReadMessage();
 
                 if (im == null)
                 {

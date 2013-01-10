@@ -107,7 +107,7 @@
 //        {
 
 //            //GoSendHandhakeTest();
-//            deveServer.AddDeveIncommingMessage(new DeveIncommingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Connected }));
+//            deveServer.AddDeveIncomingMessage(new DeveIncomingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Connected }));
 
         
 //            try
@@ -141,8 +141,8 @@
 //                    }
 
 //                    byte[] data = ReadThisAmmountOfBytes(bytesToRead);
-//                    DeveIncommingMessage devIn = new DeveIncommingMessage(this, data);
-//                    deveServer.AddDeveIncommingMessage(devIn);
+//                    DeveIncomingMessage devIn = new DeveIncomingMessage(this, data);
+//                    deveServer.AddDeveIncomingMessage(devIn);
 
 //                }
 //                catch (SocketException e)
@@ -216,8 +216,8 @@
 //                //            }
 //                //        }
 
-//                //        DeveIncommingMessage devInc = new DeveIncommingMessage(this, totalMessage);
-//                //        deveServer.AddDeveIncommingMessage(devInc);
+//                //        DeveIncomingMessage devInc = new DeveIncomingMessage(this, totalMessage);
+//                //        deveServer.AddDeveIncomingMessage(devInc);
 //                //    }
 //                ////blocks until a client sends a message
 //                //bytesRead = networkStream.Read(message, 0, size);
@@ -229,8 +229,8 @@
 
 //                //    byte[] b = new byte[bytesRead];
 //                //    Array.Copy(message, b, bytesRead);
-//                //    DeveIncommingMessage devInc = new DeveIncommingMessage(this, b);
-//                //    deveServer.AddDeveIncommingMessage(devInc);
+//                //    DeveIncomingMessage devInc = new DeveIncomingMessage(this, b);
+//                //    deveServer.AddDeveIncomingMessage(devInc);
 //                //}
 //                //else
 //                //{
@@ -264,7 +264,7 @@
 //            tcpClient.Close();
 
 //            deveServer.RemoveClient(this);
-//            deveServer.AddDeveIncommingMessage(new DeveIncommingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Disconnected }));
+//            deveServer.AddDeveIncomingMessage(new DeveIncomingMessage(this, new byte[2] { (byte)DeveMessageType.StatusChanged, (byte)NetworkStatus.Disconnected }));
 //        }
 
 //        public byte[] ReadThisAmmountOfBytes(int bytesToRead)

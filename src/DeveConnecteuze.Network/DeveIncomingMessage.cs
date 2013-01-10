@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DeveConnecteuze.Network
 {
-    public class DeveIncommingMessage
+    public class DeveIncomingMessage
     {
         private byte[] bytes;
         private int m_readPosition = 0;
@@ -23,7 +23,7 @@ namespace DeveConnecteuze.Network
             get { return messageType; }
         }
 
-        public DeveIncommingMessage(DeveConnection sender, byte[] bytes)
+        public DeveIncomingMessage(DeveConnection sender, byte[] bytes)
         {
             this.bytes = bytes;
             this.sender = sender;
