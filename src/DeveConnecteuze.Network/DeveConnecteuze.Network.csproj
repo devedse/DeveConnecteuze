@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="DeveClient.cs" />
     <Compile Include="DeveConnection.cs" />
-    <Compile Include="DeveIncommingMessage.cs" />
+    <Compile Include="DeveIncomingMessage.cs" />
     <Compile Include="DeveMessageType.cs" />
     <Compile Include="DeveOutgoingMessage.cs" />
     <Compile Include="DevePeer.cs" />
