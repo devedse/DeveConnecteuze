@@ -34,7 +34,10 @@ namespace DeveConnecteuze.Network
 
         public override void Stop()
         {
-            connection.Stop();
+            if (connection != null)
+            {
+                connection.Stop();
+            }
         }
 
         public void Send(DeveOutgoingMessage devOut)
