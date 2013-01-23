@@ -24,6 +24,7 @@ namespace DeveConnecteuze.Network
         {
             receiveBuffer = new byte[bufferSize];
             this.tcpClient = tcpClient;
+            this.tcpClient.NoDelay = true;
             this.networkStream = tcpClient.GetStream();
             this.peer = peer;
         }
