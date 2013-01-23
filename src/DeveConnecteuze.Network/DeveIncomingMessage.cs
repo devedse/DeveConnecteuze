@@ -44,9 +44,16 @@ namespace DeveConnecteuze.Network
             return retval;
         }
 
+        public UInt32 ReadUInt32()
+        {
+            UInt32 retval = BitConverter.ToUInt32(bytes, m_readPosition);
+            m_readPosition += 4;
+            return retval;
+        }
+
         public float ReadFloat()
         {
-            float retval = BitConverterFloat.ToFloat(bytes, m_readPosition);
+            float retval = BitConverter.ToSingle(bytes, m_readPosition);
             m_readPosition += 4;
             return retval;
         }

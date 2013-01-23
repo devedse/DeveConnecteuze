@@ -165,5 +165,14 @@ namespace Server
             }
             deveClient.Send(msg);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DeveOutgoingMessage msg = new DeveOutgoingMessage(DeveMessageType.Data);
+            msg.WriteString("teststuff");
+            msg.WriteFloat(1.23456789f);
+            msg.WriteUInt32(12020);
+            deveClient.Send(msg);
+        }
     }
 }

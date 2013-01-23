@@ -71,6 +71,14 @@ namespace Server
                                         this.listBox1.Items.Insert(0, "Done writing file");
                                     }));
                                 }
+                                else if (ding.Equals("teststuff"))
+                                {
+                                    this.Invoke(new MethodInvoker(delegate
+                                    {
+                                        this.listBox1.Items.Insert(0, "Just received a teststuff message: " + im.ReadFloat() + " and " + im.ReadUInt32());
+                                    }));
+
+                                }
                                 else
                                 {
 

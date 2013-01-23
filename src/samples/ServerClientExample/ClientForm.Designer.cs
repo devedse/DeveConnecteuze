@@ -35,22 +35,23 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(10, 11);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(545, 22);
+            this.textBox1.Size = new System.Drawing.Size(410, 20);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(580, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(435, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 127);
+            this.button1.Size = new System.Drawing.Size(194, 74);
             this.button1.TabIndex = 1;
             this.button1.Text = "Send";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,10 +59,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(13, 52);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(10, 42);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(323, 149);
+            this.button2.Size = new System.Drawing.Size(242, 121);
             this.button2.TabIndex = 2;
             this.button2.Text = "Stop Client";
             this.button2.UseVisualStyleBackColor = true;
@@ -70,19 +71,17 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(13, 226);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox1.Location = new System.Drawing.Point(10, 184);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(825, 196);
+            this.listBox1.Size = new System.Drawing.Size(620, 160);
             this.listBox1.TabIndex = 3;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(344, 52);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(258, 42);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(229, 78);
+            this.button3.Size = new System.Drawing.Size(172, 63);
             this.button3.TabIndex = 4;
             this.button3.Text = "Send A Lot";
             this.button3.UseVisualStyleBackColor = true;
@@ -90,10 +89,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(344, 138);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(258, 112);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(229, 63);
+            this.button4.Size = new System.Drawing.Size(172, 51);
             this.button4.TabIndex = 5;
             this.button4.Text = "Send A Big Message";
             this.button4.UseVisualStyleBackColor = true;
@@ -101,20 +99,31 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(580, 145);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(435, 89);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(259, 56);
+            this.button5.Size = new System.Drawing.Size(194, 46);
             this.button5.TabIndex = 6;
             this.button5.Text = "Send file";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(435, 140);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(191, 23);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Send float";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // ClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 432);
+            this.ClientSize = new System.Drawing.Size(638, 351);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -122,7 +131,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ClientForm";
             this.Text = "ClientForm";
             this.ResumeLayout(false);
@@ -139,5 +148,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

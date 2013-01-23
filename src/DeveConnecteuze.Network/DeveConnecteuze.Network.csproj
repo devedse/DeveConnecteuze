@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BitConverterFloat.cs" />
     <Compile Include="DeveClient.cs" />
     <Compile Include="DeveConnection.cs" />
     <Compile Include="DeveIncomingMessage.cs" />
