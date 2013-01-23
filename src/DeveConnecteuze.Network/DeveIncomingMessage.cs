@@ -44,6 +44,13 @@ namespace DeveConnecteuze.Network
             return retval;
         }
 
+        public float ReadFloat()
+        {
+            float retval = BitConverterFloat.ToFloat(bytes, m_readPosition);
+            m_readPosition += 4;
+            return retval;
+        }
+
         public String ReadString()
         {
             int stringLength = ReadInt32();

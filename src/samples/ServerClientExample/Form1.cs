@@ -10,6 +10,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using System.IO;
+using DeveConnecteuze.Network;
 
 namespace Server
 {
@@ -18,10 +19,6 @@ namespace Server
         public Form1()
         {
             InitializeComponent();
-
-            //Thread tr = new Thread(new ThreadStart(Ogo));
-            //tr.Start();
-
         }
 
         public void Ogo()

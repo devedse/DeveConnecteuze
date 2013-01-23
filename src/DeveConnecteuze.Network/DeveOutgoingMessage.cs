@@ -49,7 +49,7 @@ namespace DeveConnecteuze.Network
             byte[] b = encoding.GetBytes(value);
 
             WriteInt32(b.Length); //Write the String length
-         
+
             WriteBytes(b);
         }
 
@@ -57,6 +57,12 @@ namespace DeveConnecteuze.Network
         {
             //IncreaseLengthByteArray(4);
             byte[] b = BitConverter.GetBytes(value);
+            WriteBytes(b);
+        }
+
+        public void WriteFloat(float value)
+        {
+            byte[] b = BitConverterFloat.GetBytes(value);
             WriteBytes(b);
         }
 
